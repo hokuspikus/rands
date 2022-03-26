@@ -29,3 +29,28 @@ array_3 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 array_4 = [x for x in range(12)]
 print(list_slicer(array_3))
 print(list_slicer(array_4))
+
+
+
+def count_the_list(array_to_count):
+    """Function that counts the occurances of the elements in the list and saves them to the dictionary"""
+    dict = {}
+    for element in array_to_count:
+        if element not in dict:
+            dict[element] = array_to_count.count(element)
+    return dict
+
+
+array_5 = [1, 2, 3, 4, 5, 3, 4, 5, 5]
+print(count_the_list(array_5))
+
+
+def lists_to_set(array_1, array_2):
+    """Function takes two lists of the same length and makes a set with i elements in pairs"""
+    new_set = set()
+    for i in range(len(array_1)):
+        new_set.add((array_1[i], array_2[i]))
+    return new_set
+
+
+print(lists_to_set(array_1, array_2))
