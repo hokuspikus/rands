@@ -53,3 +53,52 @@ def strange_list_shower(the_list):
     return(result)
 
 print(strange_list_shower(another_list))
+
+# Write a program to count the total number of digits in a number using a while loop.
+
+def number_length_with_while(number):
+    count = 0
+    while number != 0:
+        count += 1
+        number = number // 10
+    return count
+
+number_for_len = 7263772163
+
+print(number_length_with_while(number_for_len))
+
+# Print list in reverse order using a loop
+
+list_for_reverse = [1, 2, 3, 4, 5, 6, 7]
+
+def reverse_list_loop(list):
+    result = []
+    for i in range(len(list)):
+        result.append(list.pop())
+    return result
+
+print(reverse_list_loop(list_for_reverse))
+
+# Display numbers from -10 to -1 using for loop
+
+def negative_10():
+    result = ""
+    for i in range(-10, 0):
+        result += f"{i}\n"
+    return result
+
+print(negative_10())
+
+# Use else block to display a message “Done” after successful execution of for loop
+
+def for_else():
+    result = ""
+    for i in range(5):
+        result += f"{i} + "
+    else:
+        result.rstrip("+")
+        result += f"= {sum([x for x in range(5)])}"
+        print("Done")
+    return result
+
+print(for_else())
