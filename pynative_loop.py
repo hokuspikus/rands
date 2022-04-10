@@ -96,7 +96,7 @@ def for_else():
     for i in range(5):
         result += f"{i} + "
     else:
-        result.rstrip("+")
+        result = result[:-2]
         result += f"= {sum([x for x in range(5)])}"
         print("Done")
     return result
